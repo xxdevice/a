@@ -53,51 +53,9 @@
 
       <div id="main">
         <div id="container">
-          <!-- デバイスリスト -->
-          <label for=""><span class="sp_none">武器種</span>
-            <select id="weapons" v-model="selected">
-              <option v-for="item in weapons" v-bind:value=item.weapon v-bind:label=item.weapon>{{ item.weapon }}</option>
-            </select>
-          </label>
-          <section class="none" v-bind:class='{active:isSheat}' id="sheat">
-            <form class="add-form" v-on:submit.prevent="doAdd">
-              <div class="page">
-                <div class="weapons" v-for="item in weapons">
-                  <div class="weapon" v-if="item.weapon === selected">
-                    {{item.weapon}}
-                    <div class="series" v-for="type in item.type">
-                      <article class="card">
-                        <div class="card_in">
-                          <!-- <div class="border"> -->
-                            <p class="name">{{type.series}} ( {{type.attribute}}属性 {{type.maker}} 攻撃力:{{type.power}})</p>
-                            <table>
-                              <tr>
-                                <td>
-                                  <span v-for="(affix,index ) in type.affix">
-                                    <label><input type="checkbox">{{index}}{{affix}}</label></span>
-                                </td>
-                              </tr>
-                            </table>
-                            <p class="level"><input class="addBtn" type="button"
-                              v-on:click="doAdd(type.series,type)" value="メモる"></p>
-                          <!-- </div> -->
-                        </div>
-                      </article>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </section>
-
-          <footer>
-            <p style="text-align: center;">一覧が表示されない場合はブラウザを更新してください。<br></p>
-            <p style="text-align: center;">※サーバーの都合上ページが現れるまでに時間がかかることがあります。<br></p>
-            <div>
-              <p>参考文献</p>
-              <p><a class="link" href="https://zerowiiu.kan-be.com/xenobladex/weapon/">XenobladeX Navi ゼノブレイドクロス ナビ　武器解説</a></p>
-            </div>
-          </footer>
+          <select id="weapons" v-model="selected">
+            <option v-for="item in weapons" v-bind:value=item.weapon v-bind:label=item.weapon>{{ item.weapon }}</option>
+          </select>
         </div>
       </div>
     </div>
