@@ -8,6 +8,9 @@ $(function() {
 
     for(var i = 0; i < len; i++) {
       ulObj.append($("<li>").attr({"id":data[i].id}).text(data[i].weapon));
+      data[i].type.forEach(element => {
+        ulObj.append($("<li>").attr({"id":data[i].id}).text(element.series));
+      });
     }
   });
 });
