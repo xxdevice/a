@@ -26,7 +26,7 @@
     <div id="app">
       <div id="nav">
         <div class="navi-fix">
-          <input type="radio" id="tab1" name="tab" value="-1" >
+          <input type="radio" id="tab1" name="tab" value="-1" checked >
           <label class="fgrow2" for="tab1">
             <div class="nav_tab">
               <p class="icon"><i class="fas fa-grip-horizontal"></i></p>
@@ -34,7 +34,7 @@
             </div>
           </label>
           <input type="radio" id="tab2" name="tab" value="0" >
-          <label class="fgrow2" for="tab2">
+          <label class="fgrow1" for="tab2">
             <div class="nav_tab">
               <p class="icon"><i class="fas fa-list-ul"></i>
                 <!-- ↓条件によってだしたり出さないようにすること -->
@@ -42,7 +42,15 @@
                   style="background:Tomato">{{ computedCreate.length }}</span> -->
                 <!-- ↑条件によってだしたり出さないようにすること -->
               </p>
-              <p class="text">メモ</p>
+              <p class="text">掘り</p>
+            </div>
+          </label>
+          <input type="radio" id="tab3" name="tab" value="1" >
+          <label class="fgrow1" for="tab3">
+            <div class="nav_tab">
+              <p class="icon"><i class="fas fa-check-circle"></i>
+              </p>
+              <p class="text">済み</p>
             </div>
           </label>
         </div>
@@ -51,13 +59,11 @@
       <div id="main">
         <div id="container">
           <!-- デバイスリスト -->
-          <div class="header">
-            <label for=""><span class="sp_none">武器種</span>
-              <select id="weapons">
-                
-              </select>
-            </label>
-          </div>
+          <label for=""><span class="sp_none">武器種</span>
+            <select id="weapons">
+              
+            </select>
+          </label>
           <footer>
             <p style="text-align: center;">一覧が表示されない場合はブラウザを更新してください。<br></p>
             <div>
