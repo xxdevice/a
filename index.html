@@ -26,21 +26,18 @@
     <div id="app">
       <div id="nav">
         <div class="navi-fix">
-          <input type="radio" id="tab1" name="tab" value="-1" v-model="current"
-            v-on:click='isSheat=true,isCreate=false,isFinish=false'>
+          <input type="radio" id="tab1" name="tab" value="-1" >
           <label class="fgrow2" for="tab1">
             <div class="nav_tab">
               <p class="icon"><i class="fas fa-grip-horizontal"></i></p>
               <p class="text">一覧</p>
             </div>
           </label>
-          <input type="radio" id="tab2" name="tab" value="0" v-model="current"
-            v-on:click='isSheat=false,isCreate=true,isFinish=false'>
+          <input type="radio" id="tab2" name="tab" value="0" >
           <label class="fgrow2" for="tab2">
             <div class="nav_tab">
               <p class="icon"><i class="fas fa-list-ul"></i>
                 <!-- ↓条件によってだしたり出さないようにすること -->
-
                 <!-- <span v-if="computedCreate.length != 0" class="fa-layers-counter"
                   style="background:Tomato">{{ computedCreate.length }}</span> -->
                 <!-- ↑条件によってだしたり出さないようにすること -->
@@ -54,17 +51,15 @@
       <div id="main">
         <div id="container">
           <!-- デバイスリスト -->
-          <section class="none" v-bind:class='{active:isSheat}' id="sheat">
+          <div class="header">
             <label for=""><span class="sp_none">武器種</span>
-              <select id="weapons" v-model="selected">
-                <option v-for="item in weapons" v-bind:value=item.weapon v-bind:label=item.weapon>{{ item.weapon }}</option>
+              <select id="weapons">
+                
               </select>
             </label>
-          </section>
-
+          </div>
           <footer>
             <p style="text-align: center;">一覧が表示されない場合はブラウザを更新してください。<br></p>
-            <p style="text-align: center;">※サーバーの都合上ページが現れるまでに時間がかかることがあります。<br></p>
             <div>
               <p>参考文献</p>
               <p><a class="link" href="https://zerowiiu.kan-be.com/xenobladex/weapon/">XenobladeX Navi ゼノブレイドクロス ナビ　武器解説</a></p>
