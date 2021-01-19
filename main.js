@@ -1,5 +1,4 @@
 
-
 $(function() {
   $.getJSON("weapons.json" , function(data) {
     var
