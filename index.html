@@ -57,39 +57,39 @@
           <section class="none" v-bind:class='{active:isSheat}' id="sheat">
             <form class="add-form" v-on:submit.prevent="doAdd">
               <div class="header">
-                <label for=""><span class="sp_none">検索</span>
-                  <select id="weapons">
-                    <option v-for="item in weapons" v-bind:value=item.weapon v-bind:label=item.weapon>
+                <label for=""><span class="sp_none">武器種</span>
+                  <select id="weapons" v-model="selected">
+                    <option v-for="item in weapons" v-bind:value=item.weapon v-bind:label=item.weapon>{{ item.weapon }}</option>
                   </select>
                 </label>
               </div>
               <div class="page">
-                <!-- <article class="card" v-for="(device, dev_i) in matcheMaterial">
-                  <div class="card_in">
-                    <div class="border">
-                      <p class="name">{{device.device}}</p>
-                      <div class="ranks">
-                        <template v-for="(item, i) in device.type" :key="item.id">
-                          <div class="rank" :class="'a'+item.rank+'a'">
-                            <div class="info">
-                              <p class="level">{{item.rank}} <input class="addBtn" type="button"
-                                  v-on:click="doAdd(device,item)" value="追加"></p>
-                              <p class="info_text">{{item.tips}}</p>
-                              <br>
-                              <p class="info_text" v-for="(mtr,i) in item.materials">{{item.materials[i]}}
-                                {{item.material_num[i]}}コ</p>
-                            </div>
-                          </div>
-                          <template v-if="i == 0 && item.rank !== '-'">
-                            <input class="sheat_dev_checkbox" type="checkbox" :id="'sheat_dev_check_'+dev_i">
-                            <label class="open_other" :for="'sheat_dev_check_'+dev_i">全表示</label>
-                          </template>
-                        </template>
-                      </div>
+                <div class="weapons" v-for="item in weapons">
+                  <div class="weapon" v-if="item.weapon === selected">
+                    {{item.weapon}}
+                    <div class="series" v-for="type in item.type">
+                      <article class="card">
+                        <div class="card_in">
+                          <!-- <div class="border"> -->
+                            <p class="name">{{type.series}} ( {{type.attribute}}属性 {{type.maker}} 攻撃力:{{type.power}})</p>
+                            <table>
+                              <tr>
+                                <td>
+                                  <span v-for="(affix,index ) in type.affix">
+                                    <label><input type="checkbox">{{index}}{{affix}}</label></span>
+                                </td>
+                              </tr>
+                            </table>
+                            <p class="level"><input class="addBtn" type="button"
+                              v-on:click="doAdd(type.series,type)" value="メモる"></p>
+                            
+                          <!-- </div> -->
+                        </div>
+                      </article>
                     </div>
                   </div>
-                </article>
-              </div> -->
+                </div>
+              </div>
             </form>
           </section>
 

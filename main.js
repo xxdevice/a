@@ -20,13 +20,13 @@ var todoStorage = {
 var app = new Vue({
   el: '#app',
   data: {
-    isSheat:true,isCreate:false,isFinish:false,
+    isSheat:true,isCreate:false,
     // ★STEP5 localStorage から 取得した ToDo のリスト
     todos: [],
     // ★STEP11 抽出しているToDoの状態
     current: -1,
     // ★STEP11＆STEP13 各状態のラベル
-    keyword: "",
+    selected: "ナイフ",
     weapons: [],
     options: [
       { value: -1, label: 'すべて' },
