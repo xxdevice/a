@@ -139,9 +139,9 @@ a {
 }
 #container {
     .header {
-        position: fixed;
-        background: #eaeaea;
-        border-bottom: 2px solid #191919;
+        // position: fixed;
+        // background: #eaeaea;
+        // border-bottom: 2px solid #191919;
         width: 100%;
         top: 0;
     }
@@ -202,7 +202,7 @@ a {
         line-height: 50px;
         padding-left: 20px;
         &+.page {
-            padding-top: 80px;
+            padding-top: 30px;
         }
         @media screen and (max-width: 768px) {
             padding-left: 10px;

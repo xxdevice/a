@@ -203,9 +203,6 @@ a {
 }
 
 #container .header {
-  position: fixed;
-  background: #eaeaea;
-  border-bottom: 2px solid #191919;
   width: 100%;
   top: 0;
 }
@@ -311,7 +308,7 @@ a {
 }
 
 #container #sheat .header + .page {
-  padding-top: 80px;
+  padding-top: 30px;
 }
 
 @media screen and (max-width: 768px) {
