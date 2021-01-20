@@ -57,6 +57,7 @@ window.onload = function() {
     });
 
     console.log(str);
-    $(id).next().find('ul').html(str);
+    $(id).next().find('ul li').empty();
+    $(id).next().find('ul').append(str);
   });
 }
