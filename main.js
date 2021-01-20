@@ -1,4 +1,4 @@
-
+$("#demo").append($("<li>").text("inin"));
 var wepons = "";
 $(function() {
   
