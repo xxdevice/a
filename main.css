@@ -242,8 +242,10 @@ a {
   width: 30%;
 }
 
-#container .page .selected select {
+#container .page .selected ul {
   width: 100%;
+  display: inline-block;
+  height: 200px;
 }
 
 #container #sheat .header {
