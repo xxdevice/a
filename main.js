@@ -15,7 +15,6 @@ function search(weap,aff){
 var weapons = "";
 var $ffix = "";
 $(function() {
-  console.log("yahoo")
   $.getJSON("affix.json" , function(affix) {
     $.getJSON("weapons.json" , function(data) {
       var
@@ -50,6 +49,7 @@ $(function() {
 window.onload = function() {
   console.log("hoge")
   $('input[type="checkbox"]').click(function() {
+    console.log("touch")
     var id = '#'+$(this).parents(".affix").attr('id');
     var ch = $(id).find("input[type='checkbox']:checked").map(function(i,e){
       return e.value
