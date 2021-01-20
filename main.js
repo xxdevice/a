@@ -32,7 +32,7 @@ $(function() {
             case '六連星':index = 7;break;
           }
           aff = affix[wept].type[index];
-          $("#sheat .page").append($('<div class="affix">').append("<table><caption>"+element.series+"</table></caption>").append($('<td>').append(aff.affix.map(function(el,idx){
+          $("#sheat .page").append($('<div class="affix">').append("<table><caption>"+element.series+" "+ element.attribute + "属性 (" +element.power+")<br>ショップ:"+ element.shop+"</table></caption>").append($('<td>').append(aff.affix.map(function(el,idx){
             return '<label><input type="checkbox"><span>'+ el +'</span></label>';
           }))));
           console.log("----------");

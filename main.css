@@ -209,6 +209,8 @@ a {
 
 #container .page {
   margin: 0px 10px;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 @media screen and (max-width: 768px) {
@@ -226,11 +228,13 @@ a {
 #container .page .affix {
   float: left;
   width: 60%;
+  margin-bottom: 30px;
 }
 
 #container .page .affix label {
   display: inline-block;
   width: 9.5em;
+  margin: 5px 0;
 }
 
 #container .page .selected {
@@ -473,7 +477,6 @@ table td, table th {
 }
 
 table tbody tr td, table tbody tr th {
-  border-bottom: 1px solid #ccc;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   padding: 5px 0px;

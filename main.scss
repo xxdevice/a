@@ -147,6 +147,8 @@ a {
     }
     .page {
         margin: 0px 10px ;
+        font-size: 15px;
+        font-weight: 300;
         @media screen and (max-width: 768px) {
             margin: 0px 5px ;
         }
@@ -161,7 +163,9 @@ a {
             label {
                 display: inline-block;
                 width: 9.5em;
+                margin: 5px 0;
             }
+            margin-bottom: 30px;
         }
         .selected {
             float: left;
@@ -341,7 +345,6 @@ table {
 
     tbody tr {
         td,th {
-            border-bottom: 1px solid #ccc;
             transition: all 0.4s;
             padding: 5px 0px;
             @media screen and (max-width: 820px) {
