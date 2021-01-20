@@ -1,4 +1,4 @@
-$("#demo").append($("<li>").attr({"id":1}).text("hogehoge"));
+
 var wepons = "";
 $(function() {
   
