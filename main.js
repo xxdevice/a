@@ -10,9 +10,8 @@ $(function() {
     
     for(var i = 0; i < len; i++) {
       $("#demo").append($("<li>").attr({"id":data[i].id}).text(data[i].weapon));
-      $("#weapons").append($("<option>").attr({"valude":i}).text(data[i].weapon));
       data[i].type.forEach(element => {
-        $("#demo").append($("<li>").attr({"id":data[i].id}).text(element.series));
+        $("#demo").append($("<li>").attr({"id":data[i].id}).text("hogehoge"));
       });
     }
   });
