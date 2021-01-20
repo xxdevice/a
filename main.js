@@ -1,4 +1,4 @@
-$("#demo").append($("<li>").text("element.series"));
+
 var wepons = "";
 $(function() {
   
@@ -7,9 +7,10 @@ $(function() {
       ulObj = $("#demo"),
       len = data.length;
       wepons = data;
+    console.log(len);
     for(var i = 0; i < len; i++) {
       $("#demo").append($("<li>").attr({"id":data[i].id}).text(data[i].weapon));
-      data[i].type.forEach(function(element,i){
+      data[i].type.forEach(function(element,index){
         $("#demo").append($("<li>").attr({"id":data[i].id}).text(element.series));
       });
     }
