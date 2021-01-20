@@ -43,8 +43,23 @@ $(function() {
         
       }
     });
+  }),
+  $('input[type="checkbox"]').click(function() {
+    var id = '#'+$(this).parents(".affix").attr('id');
+    var ch = $(id).find("input[type='checkbox']:checked").map(function(i,e){
+      return e.value
+    });
+    str = "";
+    ch.each(function(i,e){
+      str += "<li>"+e+"</li>";
+    });
+
+    console.log(str);
+    $(id).next().find('ul li').empty();
+    $(id).next().find('ul').append(str);
   });
 });
+
 window.onload = function() {
   $('input[type="checkbox"]').click(function() {
     var id = '#'+$(this).parents(".affix").attr('id');
