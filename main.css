@@ -228,6 +228,11 @@ a {
   width: 60%;
 }
 
+#container .page .affix label {
+  display: inline-block;
+  width: 9.5em;
+}
+
 #container .page .selected {
   float: left;
   width: 40%;
@@ -521,11 +526,6 @@ tbody tr.done td,
 tbody tr.done th {
   background: #f8f8f8;
   color: #bbb;
-}
-
-tbody tr:hover td,
-tbody tr:hover th {
-  background: #f4fbff;
 }
 
 button,

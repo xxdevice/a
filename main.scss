@@ -158,6 +158,10 @@ a {
         .affix {
             float: left;
             width: 60%;
+            label {
+                display: inline-block;
+                width: 9.5em;
+            }
         }
         .selected {
             float: left;
@@ -384,10 +388,6 @@ tbody tr.done th {
     color: #bbb;
 }
 
-tbody tr:hover td,
-tbody tr:hover th {
-    background: #f4fbff;
-}
 
 button,
 input[type=button] {
