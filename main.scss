@@ -13,7 +13,7 @@ a {
     display: block;
 }
 .navi-fix {
-    max-width: 100px;
+    max-width: 90px;
     width: 100%;
     position: fixed;
     left:0;
@@ -146,57 +146,24 @@ a {
         top: 0;
     }
     .page {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
         margin: 0px 10px ;
         @media screen and (max-width: 768px) {
             margin: 0px 5px ;
         }
-        .card {
-            flex-basis: 50%;
-            margin-bottom: 20px;
-            flex-grow: 1;
-            .card_in {
-                padding: 0 10px 0;
-                @media screen and (max-width: 991px) {
-                    padding: 0 5px 0;
-                }
-                .border {
-                    padding: 0 10px ;
-                    background: #e3e3e3;
-                    border: 1px solid #cccccc;
-                    @media screen and (max-width: 991px) {
-                        padding: 0 5px;
-                    }
-                }
-                .ranks {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-around;
-                    .rank {
-                        flex-basis: 32%;
-                        @media screen and (max-width: 991px) {
-                            flex-basis: 50%;
-                        }
-                        .info {
-                            padding: 10px 5px;
-                            @media screen and (max-width: 768px) {
-                                padding: 5px;
-                            }
-                        }
-                        &.a-a {
-                            flex-basis: 100%;
-                        }
-                        @media screen and (max-width: 768px) {
-                            flex-basis: 100%;
-                        }
-                    }
-                }
-            }
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .affix {
+            float: left;
+            width: 60%;
+        }
+        .selected {
+            float: left;
+            width: 40%;
         }
     }
-
     #sheat .header {
         height: 50px;
         line-height: 50px;
@@ -233,13 +200,6 @@ a {
     #finish .border {
         padding-top: 10px;
     }
-    @media screen and (max-width: 768px) {
-        #create .page .card, #finish .page .card {
-            flex-basis: 100%;
-        }
-    }
-
-    
 }
 @media screen and (max-width: 768px) {
     .aⅩⅤa ,.aⅩa ,.aⅤa, .aⅠa {

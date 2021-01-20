@@ -20,7 +20,6 @@
   </script> -->
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
   <script src="./jquery.min.js"></script>
-  <script src="./main.js"></script>
 </head>
 
 <body>
@@ -69,21 +68,33 @@
               </label>
             </div>
             <div class="page">
-              <article class="card">
-                <div class="card_in">
-                  <div class="border">
-                    <p class="name">a</p>
-                  </div>
-                </div>
-              </article>
-              <article class="card">
-                <div class="card_in">
-                  <div class="border">
-                    <p class="name">a</p>
-                  </div>
-                </div>
-              </article>
-
+              <p>武器のアフィックスは企業ごとに決まっています。</p>
+              <div class="affix">
+                <table>
+                  <caption id="section1"><b>ドロップ装備のアフイックス</b><br>サクラバ重工武器</caption>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox">
+                          <span>射撃力アップ</span>
+                        </label>
+                        <label>
+                          <input type="checkbox">
+                          <span>射撃力ブースト</span>
+                        </label>
+                        <label>
+                          <input type="checkbox">
+                          <span>射撃命中アップ</span>
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="selected">
+                <p>test</p>
+              </div>
             </div>
           </section>
           </div>
@@ -100,5 +111,5 @@
     </div>
   </div>
 </body>
-
+  <script src="./main.js"></script>
 </html>

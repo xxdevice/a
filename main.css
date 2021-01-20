@@ -18,7 +18,7 @@ a {
 }
 
 .navi-fix {
-  max-width: 100px;
+  max-width: 90px;
   width: 100%;
   position: fixed;
   left: 0;
@@ -208,15 +208,6 @@ a {
 }
 
 #container .page {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   margin: 0px 10px;
 }
 
@@ -226,79 +217,20 @@ a {
   }
 }
 
-#container .page .card {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  margin-bottom: 20px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+#container .page::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
-#container .page .card .card_in {
-  padding: 0 10px 0;
+#container .page .affix {
+  float: left;
+  width: 60%;
 }
 
-@media screen and (max-width: 991px) {
-  #container .page .card .card_in {
-    padding: 0 5px 0;
-  }
-}
-
-#container .page .card .card_in .border {
-  padding: 0 10px;
-  background: #e3e3e3;
-  border: 1px solid #cccccc;
-}
-
-@media screen and (max-width: 991px) {
-  #container .page .card .card_in .border {
-    padding: 0 5px;
-  }
-}
-
-#container .page .card .card_in .ranks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-#container .page .card .card_in .ranks .rank {
-  -ms-flex-preferred-size: 32%;
-      flex-basis: 32%;
-}
-
-@media screen and (max-width: 991px) {
-  #container .page .card .card_in .ranks .rank {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-}
-
-#container .page .card .card_in .ranks .rank .info {
-  padding: 10px 5px;
-}
-
-@media screen and (max-width: 768px) {
-  #container .page .card .card_in .ranks .rank .info {
-    padding: 5px;
-  }
-}
-
-#container .page .card .card_in .ranks .rank.a-a {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  #container .page .card .card_in .ranks .rank {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
+#container .page .selected {
+  float: left;
+  width: 40%;
 }
 
 #container #sheat .header {
@@ -348,13 +280,6 @@ a {
 
 #container #finish .border {
   padding-top: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  #container #create .page .card, #container #finish .page .card {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
 }
 
 @media screen and (max-width: 768px) {
