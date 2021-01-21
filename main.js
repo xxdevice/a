@@ -1,4 +1,6 @@
-
+function clickEvent() {
+  console.log("onclick");
+}
 
 function search(weap,aff){
   wept = weap.weapon;
@@ -38,7 +40,7 @@ $(function() {
           $("#sheat .page").append($('<div class="affix '+data[i].weapon+'" id="'+data[i].weapon+j+'">').append($('<table>').append("<caption>"+element.series+"("+element.maker+") "+ element.attribute + "属性 (" +element.power+")<br>ショップ:"+ element.shop+"</caption>").append($('<td>').append(aff.affix.map(function(el,idx){
             return '<label><input type="checkbox" value="'+el+'"><span>'+ el +'</span></label>';
           })))).append("<p>"+element.tips+"</p>"));
-          $("#sheat .page").append($('<div class="selected">').append('<ul><li>none</li></ul><button>メモる</button>'));
+          $("#sheat .page").append($('<div class="selected">').append('<ul><li>none</li></ul><button onclick="clickEvent()">メモる</button>'));
         });
         
       }

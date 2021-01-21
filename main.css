@@ -537,6 +537,7 @@ tbody tr.done th {
   color: #bbb;
 }
 
+.button,
 button,
 input[type=button] {
   margin: 5px;
